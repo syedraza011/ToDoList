@@ -9,29 +9,28 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var viewModel=ToDoListViewModel()
-    @State var PresentSheet= false
+    @State var presentSheet = false
     var body: some View {
         NavigationView {
             VStack {
-                List(viewModel.todos, id:\.self){
-                    item in
+                List(viewModel.todos, id:\.self){ item in
                     Text(item.title)
                 }
             }
-        }.navigationTitle(Todo's')
+        }.navigationTitle("Todo's'")
             .navigationBarItems(trailing: Button(action: {
-                PresentSheet.toggle()
-            }, label: Image(systemName: "plus")
+                presentSheet.toggle()
+            }, label: {
+                Image(systemName: "plus")
                                                  
                                                  }))
-            .sheet(isPresented: $PresentSheet) {
-                viewModel
+            .sheet(isPresented: $presentSheet) {
+                AddItemView(presentSheet: $presentSheet)
      Text(item)
        
     }
     }
-}
-}
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
