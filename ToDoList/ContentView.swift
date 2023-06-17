@@ -8,17 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
+    @StateObject var viewModel=ToDoListViewModel()
+    @State var PresentSheet= false
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-        }
-        .padding()
+        NavigationView {
+            VStack {
+                List(viewModel.todos, id:\.self){
+                    item in
+                    Text(item.title)
+                }
+            }
+        }.navigationTitle(Todo's')
+            .navigationBarItems(trailing: Button(action: {
+                PresentSheet.toggle()
+            }, label: Image(systemName: "plus")
+                                                 
+                                                 }))
+            .sheet(isPresented: $PresentSheet) {
+                viewModel
+     Text(item)
+       
+    }
     }
 }
-
+}
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()

@@ -11,6 +11,8 @@
 		E9BB85072A3E280700A2EE2B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BB85062A3E280700A2EE2B /* ContentView.swift */; };
 		E9BB85092A3E281100A2EE2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BB85082A3E281100A2EE2B /* Assets.xcassets */; };
 		E9BB850C2A3E281100A2EE2B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E9BB850B2A3E281100A2EE2B /* Preview Assets.xcassets */; };
+		E9BB85132A3E291400A2EE2B /* ToDoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BB85122A3E291400A2EE2B /* ToDoListModel.swift */; };
+		E9BB85152A3E2BBA00A2EE2B /* AddItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9BB85142A3E2BBA00A2EE2B /* AddItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		E9BB85062A3E280700A2EE2B /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		E9BB85082A3E281100A2EE2B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E9BB850B2A3E281100A2EE2B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		E9BB85122A3E291400A2EE2B /* ToDoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoListModel.swift; sourceTree = "<group>"; };
+		E9BB85142A3E2BBA00A2EE2B /* AddItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +55,12 @@
 		E9BB85032A3E280700A2EE2B /* ToDoList */ = {
 			isa = PBXGroup;
 			children = (
-				E9BB85042A3E280700A2EE2B /* ToDoListApp.swift */,
 				E9BB85062A3E280700A2EE2B /* ContentView.swift */,
+				E9BB85042A3E280700A2EE2B /* ToDoListApp.swift */,
+				E9BB85122A3E291400A2EE2B /* ToDoListModel.swift */,
 				E9BB85082A3E281100A2EE2B /* Assets.xcassets */,
 				E9BB850A2A3E281100A2EE2B /* Preview Content */,
+				E9BB85142A3E2BBA00A2EE2B /* AddItemView.swift */,
 			);
 			path = ToDoList;
 			sourceTree = "<group>";
@@ -138,7 +144,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E9BB85072A3E280700A2EE2B /* ContentView.swift in Sources */,
+				E9BB85132A3E291400A2EE2B /* ToDoListModel.swift in Sources */,
 				E9BB85052A3E280700A2EE2B /* ToDoListApp.swift in Sources */,
+				E9BB85152A3E2BBA00A2EE2B /* AddItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
