@@ -9,24 +9,28 @@ import SwiftUI
 
 struct AddItemView: View {
     @State var title: String = ""
-    @State var description: String= ""
+    @State var description: String = ""
+    
+    @ObservedObject var viewModel: ToDoListViewModel
     @Binding var presentSheet: Bool
     var body: some View {
         VStack {
             TextField("Title",text: $title)
-            TextField("Description",text: $descripion)
+            TextField("Description",text: $description)
             Spacer()
             Button{
-                
-            },Label: {
+               
+                viewModel.addToDo(ToDo(title: title, description: description))
+                    presentSheet.toggle()
+            } label: {
                 Text("Add")
             }
         }
     }
 }
-
-struct AddItemView_Previews: PreviewProvider {
-    static var previews: some View {
-        AddItemView()
-    }
-}
+//
+//struct AddItemView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AddItemView()
+//    }
+//}

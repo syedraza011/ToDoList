@@ -10,6 +10,9 @@ struct ToDo:Hashable {
     let title: String
     let description: String
 }
-class ToDoListViewModel: ObserveableObject {
-    
+class ToDoListViewModel: ObservableObject {
+    @Published var todos = [ToDo]()
+    func addToDo (_ todo: ToDo) {
+        todos.append(todo)
+    }
 }
